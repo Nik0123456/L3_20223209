@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lista de pacientes del hospital seleccionado</title>
+    <title>Lista de pacientes del doctor seleccionado</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 <div th:replace="~{navbar :: navbar}"></div>
 <main>
     <div class="container px-4 py-5">
-        <h1 class="pb-2 border-bottom">Lista de pacientes del hospital seleccionado</h1>
+        <h1 class="pb-2 border-bottom">Lista de pacientes del doctor seleccionado</h1>
 
         <div th:if="${success}" class="alert alert-success mt-3" th:text="${success}"></div>
         <table class="table">
@@ -39,7 +39,7 @@
                 <td th:text="${paciente.getHospital().getNombre()}"></td>
                 <td>
                     <a class="btn btn-primary"
-                       th:href="@{'/hospital/lista'}">Regresar</a>
+                       th:href="@{'/doctor/lista'}">Regresar</a>
                 </td>
             </tr>
             </tbody>

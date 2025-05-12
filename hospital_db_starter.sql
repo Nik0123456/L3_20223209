@@ -87,8 +87,12 @@ INSERT INTO paciente (nombre, edad, genero, diagnostico, fecha_cita, numero_habi
 ('Jane Smith', 32, 'F', 'Appendicitis', '2023-04-02', 201, 2, 1),
 ('Bob Johnson', 68, 'M', 'Heart attack', '2023-04-03', 304, 1, 1),
 ('Alice Brown', 52, 'F', 'Cancer', '2023-05-01', 102, 2, 1),
-('Mike Davis', 25, 'M', 'Broken leg', '2023-04-04', 203, 3, 2);
-
+('Mike Davis', 25, 'M', 'Broken leg', '2023-04-04', 203, 3, 2),
+('Carlos Gómez', 45, 'M', 'Neumonía', '2025-06-15', 101, 1, 1),
+('María Pérez', 32, 'F', 'Apendicitis', '2025-07-02', 201, 2, 1),
+('Luis Ramírez', 68, 'M', 'Infarto', '2025-08-03', 304, 1, 1),
+('Ana Torres', 52, 'F', 'Cáncer', '2025-09-01', 102, 2, 1),
+('Javier Morales', 25, 'M', 'Fractura de pierna', '2025-10-04', 203, 3, 2);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
