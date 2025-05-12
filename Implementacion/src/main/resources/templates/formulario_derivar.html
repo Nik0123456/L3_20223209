@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Auto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    footer {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 40px;
+    }
+    header img {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body class="container mt-5">
+
+<h2 class="mb-4">Derivar paciente</h2>
+
+<form th:action="@{/paciente/guardar}" method="post" class="row g-3">
+
+  <input type="hidden" name="idPaciente" th:value="${idPaciente}">
+
+  <div class="form-group">
+    <label for="doctor_original" class="form-label">Derivar del doctor: </label>
+    <select class="form-control" id="doctor_original" name="doctor_original" required>
+      <option th:each="doctor : ${listaDoctores}" th:value="${doctor.getIdDoctor()}" th:text="${doctor.getNombre()}"></option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="doctor_final" class="form-label">Al doctor: </label>
+    <select class="form-control" id="doctor_final" name="doctor_final" required>
+      <option th:each="doctor : ${listaDoctores}" th:value="${doctor.getIdDoctor()}" th:text="${doctor.getNombre()}"></option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <a th:href="@{/paciente/lista}" class="btn btn-danger">Cancelar</a>
+    <button type="submit" class="btn btn-primary">Derivar</button>
+  </div>
+</form>
+
+</body>
+</html>
